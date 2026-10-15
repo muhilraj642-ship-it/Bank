@@ -99,5 +99,18 @@ const maskedId =
 
 document.getElementById("transactionId").textContent = maskedId;
 </script>
+  <audio id="paytmSound" autoplay preload="auto">
+  <source src="paytm.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+window.addEventListener("load", function () {
+  const sound = document.getElementById("paytmSound");
+
+  sound.play().catch(() => {
+    console.log("Browser requires user interaction to play audio.");
+  });
+});
+</script>
 </body>
 </html>
